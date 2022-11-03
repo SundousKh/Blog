@@ -25,4 +25,5 @@ urlpatterns = [
     path("user_info/", core_views.user_info),
     # this url
     path("private_place/", core_views.private_place),
+    path("accounts/", include("django.contrib.auth.urls")),
 ]
