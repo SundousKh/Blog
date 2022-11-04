@@ -26,4 +26,6 @@ urlpatterns = [
     # this url
     path("private_place/", core_views.private_place),
     path("accounts/", include("django.contrib.auth.urls")),
+    # new one
+    path("staff_place/", core_views.staff_place),
 ]

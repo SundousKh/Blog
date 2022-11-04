@@ -43,3 +43,8 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def private_place(request):
     return HttpResponse("members only!", content_type="text/plain")
+
+from django.contrib.auth.decorators import user_passes_test
+@user_passes_test(lambda user: user.is_staff)
+def staff_place(request):
+    return HttpResponse("Employees Only", content_type="text/plain")
