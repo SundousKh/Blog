@@ -28,4 +28,6 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     # new one
     path("staff_place/", core_views.staff_place),
+    # add the following url
+    path("add_messages/", core_views.add_messages),
 ]
